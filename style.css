@@ -1,0 +1,272 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Noto Sans JP', sans-serif;
+    color: #2c3e50;
+    line-height: 1.8;
+    background-color: #fff;
+    -webkit-font-smoothing: antialiased;
+}
+
+.container {
+    width: 90%;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+a {
+    text-decoration: none;
+    transition: 0.3s;
+}
+/* ======================================================
+   ヘッダー
+   ====================================================== */
+header {
+    background: #fff;
+    padding: 15px 0;
+    border-bottom: 1px solid #eee;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+.header-inner {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo-area h1 {
+    font-size: 1.1rem;
+    color: #003a70;
+    font-weight: 700;
+}
+
+.en-name {
+    font-size: 0.75rem;
+    color: #777;
+    margin-top: -5px;
+}
+
+header nav ul {
+    display: flex;
+    list-style: none;
+    gap: 20px;
+    align-items: center;
+}
+
+header nav a {
+    font-size: 0.9rem;
+    font-weight: 500;
+    color: #333;
+}
+
+header nav a:hover {
+    color: #003a70;
+}
+
+.btn-contact {
+    background: #003a70;
+    color: #fff !important;
+    padding: 8px 18px;
+    border-radius: 4px;
+}
+
+.btn-contact:hover {
+    background: #0056a3;
+}
+/* ======================================================
+   ヒーローセクション
+   ====================================================== */
+.hero {
+    background: #003a70;
+    background: linear-gradient(135deg, #002547 0%, #004e92 100%);
+    color: #fff;
+    padding: 120px 0;
+    text-align: center;
+}
+
+.hero h2 {
+    font-size: 2.4rem;
+    margin-bottom: 20px;
+    line-height: 1.4;
+}
+/* ======================================================
+   共通セクションスタイル
+   ====================================================== */
+.section {
+    padding: 100px 0;
+}
+
+.bg-gray {
+    background-color: #f4f7f9;
+}
+
+.section-title {
+    text-align: center;
+    margin-bottom: 60px;
+}
+
+.section-title .en {
+    color: #004e92;
+    font-weight: 700;
+    font-size: 0.8rem;
+    letter-spacing: 0.1em;
+    display: block;
+    margin-bottom: 10px;
+}
+
+.section-title h2 {
+    font-size: 1.8rem;
+    font-weight: 700;
+}
+/* ======================================================
+   経営理念 (Message)
+   ====================================================== */
+.message-box {
+    max-width: 800px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.message-box p {
+    margin-bottom: 20px;
+}
+/* ======================================================
+   サービス案内 (Services)
+   ====================================================== */
+.service-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 40px;
+}
+
+.service-card {
+    background: #fff;
+    padding: 40px;
+    border-top: 4px solid #003a70;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+}
+
+.service-card h3 {
+    margin-bottom: 20px;
+    font-size: 1.2rem;
+    border-bottom: 1px solid #eee;
+    padding-bottom: 10px;
+}
+
+.service-card ul {
+    list-style: none;
+}
+
+.service-card ul li {
+    margin-bottom: 8px;
+}
+
+.service-card ul li::before {
+    content: "・";
+    color: #003a70;
+    font-weight: bold;
+}
+/* ======================================================
+   会社概要 (Company Profile)
+   ====================================================== */
+.profile-table dl {
+    border-top: 1px solid #ddd;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.profile-table dt {
+    width: 25%;
+    padding: 20px;
+    border-bottom: 1px solid #ddd;
+    background: #fafafa;
+    font-weight: 700;
+    font-size: 0.9rem;
+}
+
+.profile-table dd {
+    width: 75%;
+    padding: 20px;
+    border-bottom: 1px solid #ddd;
+    font-size: 0.95rem;
+}
+/* ======================================================
+   フッター (指定リンク色の修正済み)
+   ====================================================== */
+footer {
+    background: #1a1a1a;
+    color: #fff;
+    padding: 60px 0;
+    text-align: center;
+}
+
+.footer-links {
+    margin-bottom: 30px;
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    font-size: 0.85rem;
+}
+/* リンクを明るい色に調整 */
+.footer-links a {
+    color: #cccccc; /* 明るいグレー */
+    text-decoration: underline;
+}
+
+.footer-links a:hover {
+    color: #ffffff; /* ホバー時は白 */
+    text-decoration: none;
+}
+
+.footer-logo {
+    font-weight: bold;
+    margin-bottom: 10px;
+    letter-spacing: 0.05em;
+    color: #ffffff;
+}
+
+.copyright {
+    font-size: 0.75rem;
+    opacity: 0.5;
+}
+/* ======================================================
+   レスポンシブ (スマホ対応)
+   ====================================================== */@media (max-width: 768px) {
+    header nav {
+        display: none; /* 必要に応じてハンバーガーメニューの実装を推奨 */
+    }
+
+    .hero {
+        padding: 80px 0;
+    }
+
+    .hero h2 {
+        font-size: 1.6rem;
+    }
+
+    .service-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .profile-table dt {
+        width: 100%;
+        padding: 10px 20px 0;
+        border-bottom: none;
+    }
+
+    .profile-table dd {
+        width: 100%;
+        padding: 5px 20px 15px;
+    }
+
+    .footer-links {
+        flex-direction: column;
+        gap: 15px;
+    }
+}
